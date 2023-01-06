@@ -25,4 +25,4 @@ jobs:
       run: |
         sudo apt-get install valgrind
         echo "Valgrind installed"
-        valgrind --error-exitcode=1 --leak-check=full ./todoapp.cpp
+        valgrind --error-exitcode=1 --leak-check=full todoapp.cpp
