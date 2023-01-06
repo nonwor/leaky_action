@@ -197,9 +197,7 @@ int main(int argc, char **argv) {
     delete task5;
     delete task6;
     delete task7;
-
-    delete &tasks;
-    std::cout<<alan<<"";
+    
     return 0;
 }
 
