@@ -1,10 +1,9 @@
 name: C/C++ CI
 
-on:
-  push:
-    branches: [ "master" ]
-  pull_request:
-    branches: [ "master" ]
+on: push
+
+env:
+  BUILD_TYPE: Debug
 
 jobs:
   build:
@@ -25,3 +24,4 @@ jobs:
     - name: Install dependencies
       run: |
         sudo apt-get install valgrind
+        echo "Valgrind installed"
