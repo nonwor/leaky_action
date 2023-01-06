@@ -197,7 +197,9 @@ int main(int argc, char **argv) {
     delete task5;
     delete task6;
     delete task7;
-    
+
+    alan_task.clear();
+ 
     return 0;
 }
 
