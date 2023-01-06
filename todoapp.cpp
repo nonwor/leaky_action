@@ -152,32 +152,32 @@ int main(int argc, char **argv) {
     task7 = new Task("swim", "1/2/10", true);
 
     // (9) Heap-allocate various std::set<Task *>* objects. Each set represents the Tasks for a single User.
-    std::set<Task *> alan_task;
-    alan_task.insert(task1);
-    alan_task.insert(task2);
+    // std::set<Task *> alan_task;
+    // alan_task.insert(task1);
+    // alan_task.insert(task2);
 
-    std::set<Task *> linus_task;
-    linus_task.insert(task3);
+    // std::set<Task *> linus_task;
+    // linus_task.insert(task3);
 
-    std::set<Task *> bjarne_task;
-    bjarne_task.insert(task4);
+    // std::set<Task *> bjarne_task;
+    // bjarne_task.insert(task4);
 
-    std::set<Task *> ada_task;
-    ada_task.insert(task5);
+    // std::set<Task *> ada_task;
+    // ada_task.insert(task5);
 
-    std::set<Task *> grace_task;
-    grace_task.insert(task6);
-    grace_task.insert(task7);
+    // std::set<Task *> grace_task;
+    // grace_task.insert(task6);
+    // grace_task.insert(task7);
 
 
     // (10) Add the User* and std::set<Task *>* objects to a map. 
     //      The key-value pairs in this map associate a User with a set of their Tasks.
     std::map<User *, std::set<Task *> *> tasks;
-    tasks[alan] = &alan_task;
-    tasks[linus] = &linus_task;
-    tasks[bjarne] = &bjarne_task;
-    tasks[ada] = &ada_task;
-    tasks[grace] = &grace_task;
+    // tasks[alan] = &alan_task;
+    // tasks[linus] = &linus_task;
+    // tasks[bjarne] = &bjarne_task;
+    // tasks[ada] = &ada_task;
+    // tasks[grace] = &grace_task;
 
     // (11) Implement this function to display Tasks for all Users
     print_tasks(tasks); 
@@ -189,8 +189,6 @@ int main(int argc, char **argv) {
     delete bjarne;
     delete ada;
     delete grace;
-
-    alan_task.clear();
 
     delete task1;
     delete task2;
