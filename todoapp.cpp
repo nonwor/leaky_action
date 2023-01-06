@@ -190,6 +190,8 @@ int main(int argc, char **argv) {
     delete ada;
     delete grace;
 
+    alan_task.clear();
+
     delete task1;
     delete task2;
     delete task3;
@@ -198,8 +200,6 @@ int main(int argc, char **argv) {
     delete task6;
     delete task7;
 
-    // alan_task.clear();
- 
     return 0;
 }
 
