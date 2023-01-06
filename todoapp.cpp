@@ -54,10 +54,10 @@ void print_users(std::vector<User *> &users) {
 
     // std::cout <<"here"<<" ";
 
-    for(auto &element : users){
-      std::cout <<element->name<<", ";
-      std::cout <<element->email<<" \n ";
-    }
+    // for(auto &element : users){
+    //   std::cout <<element->name<<", ";
+    //   std::cout <<element->email<<" \n ";
+    // }
    
 }
 
@@ -79,23 +79,23 @@ void print_tasks(std::map<User *, std::set<Task *> *> &tasks) {
     */
     std::cout<<"-----Task 11------"<<"\n ";
 
-    for(auto &elem: tasks){
-      std::cout<<elem.first->name<<",  ";
-      std::cout<<elem.first->email<<"\n  ";
+    // for(auto &elem: tasks){
+    //   std::cout<<elem.first->name<<",  ";
+    //   std::cout<<elem.first->email<<"\n  ";
       
-      for(auto &subelem: *elem.second){
-        std::cout<<subelem->description<<", ";
-        std::cout<<subelem->due_date<<", ";
-        // std::cout<<subelem->completed<<"\n ";
-        if(subelem->completed == 1){
-          std::cout<<"[complete]"<<"\n ";
-        } else {
-          std::cout<<"[not complete]"<<"\n ";
-        }
-      }
+    //   for(auto &subelem: *elem.second){
+    //     std::cout<<subelem->description<<", ";
+    //     std::cout<<subelem->due_date<<", ";
+    //     // std::cout<<subelem->completed<<"\n ";
+    //     if(subelem->completed == 1){
+    //       std::cout<<"[complete]"<<"\n ";
+    //     } else {
+    //       std::cout<<"[not complete]"<<"\n ";
+    //     }
+    //   }
       
 
-    }
+    // }
 
     
 }
@@ -198,7 +198,7 @@ int main(int argc, char **argv) {
     delete task6;
     delete task7;
 
-    alan_task.clear();
+    // alan_task.clear();
  
     return 0;
 }
