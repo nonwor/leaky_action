@@ -4,42 +4,45 @@
 #include <string>
 #include <vector>
 
+#include "user.h"
+#include "task.h"
+
 /*
   
   This is a skeleton for a miniature todo list application. See README.md for instructions.
     ok
 */
 
-class User {
-public:
-    // (1) Add fields for string name, string email
-    std::string name;
-    std::string email;
+// class User {
+// public:
+//     // (1) Add fields for string name, string email
+//     std::string name;
+//     std::string email;
     
 
-    // (2) Add a constructor that accepts name and email parameters and
-    //     uses them to initialize the class' name and email fields
-    User(std::string x, std::string y){
-      name = x;
-      email = y;
-    }
-};
+//     // (2) Add a constructor that accepts name and email parameters and
+//     //     uses them to initialize the class' name and email fields
+//     User(std::string x, std::string y){
+//       name = x;
+//       email = y;
+//     }
+// };
 
-class Task {
-public:
-    // (3) Add fields for string description, string due date and bool completed
-    std::string description;
-    std::string due_date;
-    bool completed;
+// class Task {
+// public:
+//     // (3) Add fields for string description, string due date and bool completed
+//     std::string description;
+//     std::string due_date;
+//     bool completed;
 
-    // (4) Add a constructor that accepts parameters for the above 
-    //     variables and uses them to initialize corresponding class fields
-    Task(std::string a, std::string b, bool c){
-      description = a;
-      due_date = b;
-      completed = c;
-    }
-};
+//     // (4) Add a constructor that accepts parameters for the above 
+//     //     variables and uses them to initialize corresponding class fields
+//     Task(std::string a, std::string b, bool c){
+//       description = a;
+//       due_date = b;
+//       completed = c;
+//     }
+// };
 
 void print_users(std::vector<User *> &users) {
     /* 
