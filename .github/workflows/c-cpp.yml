@@ -23,10 +23,10 @@ jobs:
     
     - name: Install dependencies
       run: |
-        sudo apt-get install valgrind +universal
+        sudo apt-get install valgrind
         echo "Valgrind installed"
-        chmod a+x ./todoapp
+        chmod a+x ./todoapp.cpp
     
     - name: Test 1 Full
       run: |
-        valgrind --error-exitcode=1 --leak-check=full ./todoapp
+        valgrind --error-exitcode=1 --leak-check=full ./todoapp.cpp
