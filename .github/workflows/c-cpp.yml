@@ -20,13 +20,21 @@ jobs:
 #       run: make check
 #     - name: make distcheck
 #       run: make distcheck
+    - name: Set up GCC
+      uses: egor-tensin/setup-gcc@v1
+      with:
+        version: latest
+        platform: x64
     
     - name: Install dependencies
       run: |
         sudo apt-get install valgrind
         echo "Valgrind installed"
-        chmod a+x ./todoapp.cpp
+    
+    - name: compile code
+      run: |
+        g++ -std=c++17 todoapp.cpp -o todoapp -Wall -Werror
     
     - name: Test 1 Full
       run: |
-        valgrind --error-exitcode=1 --leak-check=full ./todoapp.cpp
+        valgrind --error-exitcode=1 --leak-check=full ./todoapp
