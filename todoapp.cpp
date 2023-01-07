@@ -52,12 +52,12 @@ void print_users(std::vector<User *> &users) {
        ... etc ...
     */
 
-    // std::cout <<"here"<<" ";
+    std::cout <<"here"<<" ";
 
-    // for(auto &element : users){
-    //   std::cout <<element->name<<", ";
-    //   std::cout <<element->email<<" \n ";
-    // }
+    for(auto &element : users){
+      std::cout <<element->name<<", ";
+      std::cout <<element->email<<" \n ";
+    }
    
 }
 
@@ -79,23 +79,23 @@ void print_tasks(std::map<User *, std::set<Task *> *> &tasks) {
     */
     std::cout<<"-----Task 11------"<<"\n ";
 
-    // for(auto &elem: tasks){
-    //   std::cout<<elem.first->name<<",  ";
-    //   std::cout<<elem.first->email<<"\n  ";
+    for(auto &elem: tasks){
+      std::cout<<elem.first->name<<",  ";
+      std::cout<<elem.first->email<<"\n  ";
       
-    //   for(auto &subelem: *elem.second){
-    //     std::cout<<subelem->description<<", ";
-    //     std::cout<<subelem->due_date<<", ";
-    //     // std::cout<<subelem->completed<<"\n ";
-    //     if(subelem->completed == 1){
-    //       std::cout<<"[complete]"<<"\n ";
-    //     } else {
-    //       std::cout<<"[not complete]"<<"\n ";
-    //     }
-    //   }
+      for(auto &subelem: *elem.second){
+        std::cout<<subelem->description<<", ";
+        std::cout<<subelem->due_date<<", ";
+        // std::cout<<subelem->completed<<"\n ";
+        if(subelem->completed == 1){
+          std::cout<<"[complete]"<<"\n ";
+        } else {
+          std::cout<<"[not complete]"<<"\n ";
+        }
+      }
       
 
-    // }
+    }
 
     
 }
@@ -152,32 +152,32 @@ int main(int argc, char **argv) {
     task7 = new Task("swim", "1/2/10", true);
 
     // (9) Heap-allocate various std::set<Task *>* objects. Each set represents the Tasks for a single User.
-    // std::set<Task *> alan_task;
-    // alan_task.insert(task1);
-    // alan_task.insert(task2);
+    std::set<Task *> alan_task;
+    alan_task.insert(task1);
+    alan_task.insert(task2);
 
-    // std::set<Task *> linus_task;
-    // linus_task.insert(task3);
+    std::set<Task *> linus_task;
+    linus_task.insert(task3);
 
-    // std::set<Task *> bjarne_task;
-    // bjarne_task.insert(task4);
+    std::set<Task *> bjarne_task;
+    bjarne_task.insert(task4);
 
-    // std::set<Task *> ada_task;
-    // ada_task.insert(task5);
+    std::set<Task *> ada_task;
+    ada_task.insert(task5);
 
-    // std::set<Task *> grace_task;
-    // grace_task.insert(task6);
-    // grace_task.insert(task7);
+    std::set<Task *> grace_task;
+    grace_task.insert(task6);
+    grace_task.insert(task7);
 
 
     // (10) Add the User* and std::set<Task *>* objects to a map. 
     //      The key-value pairs in this map associate a User with a set of their Tasks.
     std::map<User *, std::set<Task *> *> tasks;
-    // tasks[alan] = &alan_task;
-    // tasks[linus] = &linus_task;
-    // tasks[bjarne] = &bjarne_task;
-    // tasks[ada] = &ada_task;
-    // tasks[grace] = &grace_task;
+    tasks[alan] = &alan_task;
+    tasks[linus] = &linus_task;
+    tasks[bjarne] = &bjarne_task;
+    tasks[ada] = &ada_task;
+    tasks[grace] = &grace_task;
 
     // (11) Implement this function to display Tasks for all Users
     print_tasks(tasks); 
