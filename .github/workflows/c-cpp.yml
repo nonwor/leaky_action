@@ -34,6 +34,7 @@ jobs:
     - name: compile code
       run: |
         g++ -std=c++17 todoapp.cpp -o todoapp -Wall -Werror
+        ./todoapp
     
     - name: Test 1 Full
       run: |
