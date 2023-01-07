@@ -23,7 +23,7 @@ jobs:
     
     - name: Install dependencies
       run: |
-        sudo apt-get install valgrind
+        sudo apt-get install valgrind +universal
         echo "Valgrind installed"
         chmod a+x ./todoapp
     
