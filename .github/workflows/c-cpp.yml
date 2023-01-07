@@ -30,8 +30,11 @@ jobs:
       run: |
         sudo apt-get install valgrind
         echo "Valgrind installed"
-        chmod a+x ./todoapp.cpp
+    
+    - name: compile code
+      run: |
+        g++ -std=c++17 todoapp.cpp -o todoapp -Wall -Werror
     
     - name: Test 1 Full
       run: |
-        valgrind --error-exitcode=1 --leak-check=full ./todoapp.cpp
+        valgrind --error-exitcode=1 --leak-check=full ./todoapp
