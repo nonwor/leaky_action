@@ -20,6 +20,11 @@ jobs:
 #       run: make check
 #     - name: make distcheck
 #       run: make distcheck
+    - name: Set up GCC
+      uses: egor-tensin/setup-gcc@v1
+      with:
+        version: latest
+        platform: x64
     
     - name: Install dependencies
       run: |
