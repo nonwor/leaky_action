@@ -26,6 +26,7 @@ jobs:
         sudo apt-get install valgrind
         echo "Valgrind installed"
         chmod a+x ./todoapp.cpp
-        valgrind --leak-check=full ./todoapp.cpp
-        chmod a+x ./todoappmin.cpp
-        valgrind --leak-check=full ./todoappmin.cpp
+    
+    - name: Test 1 Full
+      run: |
+        valgrind --error-exitcode=1 --leak-check=full ./todoapp.cpp
