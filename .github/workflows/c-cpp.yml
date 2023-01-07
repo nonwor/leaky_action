@@ -30,8 +30,8 @@ jobs:
     
     - name: Test 1 Full
       run: |
-        valgrind --leak-check=full ./todoapp.cpp
+        valgrind --error-exitcode=1 --leak-check=full ./todoapp.cpp
         
     - name: Test 2 Min
       run: |
-        valgrind --leak-check=full ./todoappmin.cpp
+        valgrind --error-exitcode=1 --leak-check=full ./todoappmin.cpp
